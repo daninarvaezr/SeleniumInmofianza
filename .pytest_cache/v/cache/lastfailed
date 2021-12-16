@@ -1,0 +1,6 @@
+{
+  "src/tests/test_calculadora.py": true,
+  "src/tests/test_correo.py": true,
+  "src/tests/test_db.py": true,
+  "src/tests/test_excel.py": true
+}

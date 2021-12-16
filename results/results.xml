@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="1" hostname="LAPTOP-QNMDJI6Q" name="pytest" skipped="0" tests="1" time="24.057" timestamp="2021-09-15T15:06:51.365217"><testcase classname="src.tests.test_excel.Calculadora" file="src\tests\test_excel.py" line="9" name="testCalculadoraExcel" time="23.397"><failure message="AssertionError: Los valores comparados no coinciden">self = &lt;tests.test_excel.Calculadora testMethod=testCalculadoraExcel&gt;
+
+    def testCalculadoraExcel(self):
+        for row in Selenium.all_rows(self):
+            if row[0].value:
+                Selenium.get_elements(self, &quot;first_number&quot;).clear()
+                Selenium.get_elements(self, &quot;second_number&quot;).clear()
+                Selenium.get_elements(self, &quot;first_number&quot;).send_keys(row[0].value)
+    
+    
+                Selenium.get_elements(self, &quot;second_number&quot;).send_keys(row[1].value)
+    
+    
+                Selenium.get_select_elements(self, &quot;operation&quot;).select_by_visible_text(row[2].value)
+    
+    
+                Selenium.get_elements(self, &quot;botton&quot;).click()
+                Selenium.esperar(self,2)
+&gt;               Selenium.assert_value(self, &quot;result&quot;, row[3].value)
+
+src\tests\test_excel.py:26: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;tests.test_excel.Calculadora testMethod=testCalculadoraExcel&gt;, locator = &apos;result&apos;, TEXTO = &apos;2&apos;
+
+    def assert_value(self, locator, TEXTO):
+    
+        Get_Entity = Functions.get_entity(self, locator)
+    
+        if Get_Entity is None:
+            print(&quot;No se encontro el valor en el Json definido&quot;)
+        else:
+            if self.json_GetFieldBy.lower() == &quot;id&quot;:
+                wait = WebDriverWait(self.driver, 15)
+                wait.until(EC.presence_of_element_located((By.ID, self.json_ValueToFind)))
+                ObjText = self.driver.find_element_by_id(self.json_ValueToFind).get_attribute(&quot;value&quot;)
+    
+    
+            if self.json_GetFieldBy.lower() == &quot;name&quot;:
+                wait = WebDriverWait(self.driver, 15)
+                wait.until(EC.presence_of_element_located((By.NAME, self.json_ValueToFind)))
+                ObjText = self.driver.find_element_by_name(self.json_ValueToFind).get_attribute(&quot;value&quot;)
+    
+            if self.json_GetFieldBy.lower() == &quot;xpath&quot;:
+                wait = WebDriverWait(self.driver, 15)
+                wait.until(EC.presence_of_element_located((By.XPATH, self.json_ValueToFind)))
+                ObjText = self.driver.find_element_by_xpath(self.json_ValueToFind).get_attribute(&quot;value&quot;)
+    
+            if self.json_GetFieldBy.lower() == &quot;link&quot;:
+                wait = WebDriverWait(self.driver, 15)
+                wait.until(EC.presence_of_element_located((By.PARTIAL_LINK_TEXT, self.json_ValueToFind)))
+                ObjText = self.driver.find_element_by_partial_link_text(self.json_ValueToFind).get_attribute(&quot;value&quot;)
+    
+            if self.json_GetFieldBy.lower() == &quot;css&quot;:
+                wait = WebDriverWait(self.driver, 15)
+                wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, self.json_ValueToFind)))
+                ObjText = self.driver.find_element_by_css_selector(self.json_ValueToFind).get_attribute(&quot;value&quot;)
+    
+        print(&quot;Verificar Texto: el valor mostrado en: &quot; + locator + &quot; es: &quot; + ObjText + &quot; el esperado es: &quot; + str(TEXTO))
+        self.capturar_pantalla()
+&gt;       assert str(TEXTO) == ObjText, &quot;Los valores comparados no coinciden&quot;
+E       AssertionError: Los valores comparados no coinciden
+
+src\functions\Functions.py:673: AssertionError</failure><system-out>Directorio Base: C:\Users\jorge\OneDrive\Documents\SELENIUM\src
+----------------
+CHROME
+---------------
+get_json_file: C:\Users\jorge\OneDrive\Documents\SELENIUM\src/pages/Calculadora.json
+get_elements: number1Field
+get_elements: number2Field
+get_elements: number1Field
+get_elements: number2Field
+get_select_elements: selectOperationDropdown
+get_elements: calculateButton
+Esperar: Inicia (2)
+Esperar: Carga Finalizada ... 
+Verificar Texto: el valor mostrado en: result es: 35 el esperado es: 35
+C:\Users\jorge\OneDrive\Documents\SELENIUM\src/data/capturas/15-09-2021/Calculadora/CHROME/150651//Calculadora_(150656).png
+get_elements: number1Field
+get_elements: number2Field
+get_elements: number1Field
+get_elements: number2Field
+get_select_elements: selectOperationDropdown
+get_elements: calculateButton
+Esperar: Inicia (2)
+Esperar: Carga Finalizada ... 
+Verificar Texto: el valor mostrado en: result es: 10 el esperado es: 10
+C:\Users\jorge\OneDrive\Documents\SELENIUM\src/data/capturas/15-09-2021/Calculadora/CHROME/150651//Calculadora_(150658).png
+get_elements: number1Field
+get_elements: number2Field
+get_elements: number1Field
+get_elements: number2Field
+get_select_elements: selectOperationDropdown
+get_elements: calculateButton
+Esperar: Inicia (2)
+Esperar: Carga Finalizada ... 
+Verificar Texto: el valor mostrado en: result es: 45 el esperado es: 45
+C:\Users\jorge\OneDrive\Documents\SELENIUM\src/data/capturas/15-09-2021/Calculadora/CHROME/150651//Calculadora_(150701).png
+get_elements: number1Field
+get_elements: number2Field
+get_elements: number1Field
+get_elements: number2Field
+get_select_elements: selectOperationDropdown
+get_elements: calculateButton
+Esperar: Inicia (2)
+Esperar: Carga Finalizada ... 
+Verificar Texto: el valor mostrado en: result es: 3 el esperado es: 3
+C:\Users\jorge\OneDrive\Documents\SELENIUM\src/data/capturas/15-09-2021/Calculadora/CHROME/150651//Calculadora_(150703).png
+get_elements: number1Field
+get_elements: number2Field
+get_elements: number1Field
+get_elements: number2Field
+get_select_elements: selectOperationDropdown
+get_elements: calculateButton
+Esperar: Inicia (2)
+Esperar: Carga Finalizada ... 
+Verificar Texto: el valor mostrado en: result es: 16 el esperado es: 16
+C:\Users\jorge\OneDrive\Documents\SELENIUM\src/data/capturas/15-09-2021/Calculadora/CHROME/150651//Calculadora_(150705).png
+get_elements: number1Field
+get_elements: number2Field
+get_elements: number1Field
+get_elements: number2Field
+get_select_elements: selectOperationDropdown
+get_elements: calculateButton
+Esperar: Inicia (2)
+Esperar: Carga Finalizada ... 
+Verificar Texto: el valor mostrado en: result es: 12 el esperado es: 12
+C:\Users\jorge\OneDrive\Documents\SELENIUM\src/data/capturas/15-09-2021/Calculadora/CHROME/150651//Calculadora_(150708).png
+get_elements: number1Field
+get_elements: number2Field
+get_elements: number1Field
+get_elements: number2Field
+get_select_elements: selectOperationDropdown
+get_elements: calculateButton
+Esperar: Inicia (2)
+Esperar: Carga Finalizada ... 
+Verificar Texto: el valor mostrado en: result es: 60 el esperado es: 60
+C:\Users\jorge\OneDrive\Documents\SELENIUM\src/data/capturas/15-09-2021/Calculadora/CHROME/150651//Calculadora_(150710).png
+get_elements: number1Field
+get_elements: number2Field
+get_elements: number1Field
+get_elements: number2Field
+get_select_elements: selectOperationDropdown
+get_elements: calculateButton
+Esperar: Inicia (2)
+Esperar: Carga Finalizada ... 
+Verificar Texto: el valor mostrado en: result es: 3 el esperado es: 2
+C:\Users\jorge\OneDrive\Documents\SELENIUM\src/data/capturas/15-09-2021/Calculadora/CHROME/150651//Calculadora_(150712).png
+Se cerrará  el DRIVER
+</system-out></testcase></testsuite></testsuites>

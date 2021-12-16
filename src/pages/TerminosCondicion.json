@@ -1,0 +1,18 @@
+{
+    "Texto1": {
+        "GetFieldBy": "id",
+        "ValueToFind": "txtUsuario"
+    },
+    "Password": {
+        "GetFieldBy": "id",
+        "ValueToFind": "txtPwd"
+    },
+    "IniciarSesion": {
+        "GetFieldBy": "id",
+        "ValueToFind": "btnnLogin"
+    },
+    "AsersionMensajeErrorUsuario": {
+        "GetFieldBy": "id",
+        "ValueToFind": "lblMensaje"
+    }
+}
