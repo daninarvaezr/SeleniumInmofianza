@@ -6,3 +6,8 @@ enviroment/*
 src/tests/__pycache__/*
 src/pages/__pycache__/*
 src/classes/test_login.py
+src/functions/__pycache__/__init__.cpython-39.pyc
+src/functions/__pycache__/Functions.cpython-39.pyc
+src/tests/__pycache__/test_LoginInmofianza.cpython-39.pyc
+src/tests/__pycache__/__init__.cpython-39.pyc
+src/functions/__pycache__/__init__.cpython-39.pyc
