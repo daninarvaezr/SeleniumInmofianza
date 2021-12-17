@@ -16,6 +16,8 @@ class LoginInmofianza(Selenium,unittest.TestCase):
                  Selenium.esperar(self, 2)
                  Selenium.get_elements(self, "Password").send_keys(123)                         
                  Selenium.esperar(self, 2)
+                 #Selenium.get_elements(self, "Username").send_keys(row[0].value)              
+                 #Selenium.get_elements(self, "Password").send_keys(row[1].value)  
                  Selenium.get_elements(self, "IniciarSesion").click()   
                  Selenium.esperar(self, 5)                 
                  Selenium.assert_text(self, 'AsersionMensajeErrorUsuario', 'Usuario o contraseña incorrecto')                                                        

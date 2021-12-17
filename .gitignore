@@ -5,3 +5,4 @@ enviroment/*
 /src/functions/__pycache__/*
 src/tests/__pycache__/*
 src/pages/__pycache__/*
+src/classes/test_login.py
