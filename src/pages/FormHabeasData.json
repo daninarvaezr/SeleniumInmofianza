@@ -1,0 +1,13 @@
+{
+   
+    
+    "Aceptar": {
+        "GetFieldBy": "id",
+        "ValueToFind": "btnAceptar"
+    },
+    "Guardar": {
+        "GetFieldBy": "id",
+        "ValueToFind": "verificarFlujo3"
+    }
+   
+}
