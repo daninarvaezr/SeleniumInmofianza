@@ -1,7 +1,6 @@
 import selenium
 from functions.Functions import Functions as Selenium
 import unittest
-
 class EventLogin():
 
     def Loguin(self,UserName,Password):
