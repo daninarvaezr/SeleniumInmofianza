@@ -8,14 +8,16 @@ class LoginInmofianza(Selenium,unittest.TestCase):
     def setUp(self):
         Selenium.abrir_navegador(self)
         Selenium.get_json_file(self,"LoginInmofianza")
-        Selenium.get_json_file(self,"TerminosCondicion")
+        #Selenium.get_json_file(self,"TerminosCondicion")
         self.driver.maximize_window()
                    
     def testLoginInmofianza_AccesoDenegado(self):
         EventLogin.Logueo(self,1013699960,1013699960)
+        Selenium.assert_text(self, 'AsersionMensajeErrorUsuario', 'Usuario o contraseña incorrecto')
     def testLoginInmofianza_AccesoCorrecto(self):
-        EventLogin.Logueo(self,1013665960,1013665960)        
-        Selenium.assert_text(self, 'Titulo_1', 'DATOS PERSONALES Y ENROLAMIENTO FACIAL')                                                                                 
+        EventLogin.Logueo(self,1013665960,1013665960)
+        Selenium.esperar(self, 2)        
+        Selenium.assert_text(self, 'Titulo_1', 'DATOS PERSONALES Y ENROLAMIENTO FACIAL')                                                                                         
                  
     if __name__ == '__main__':
         unittest.main()

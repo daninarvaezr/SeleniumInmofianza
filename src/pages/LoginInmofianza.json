@@ -14,5 +14,9 @@
     "AsersionMensajeErrorUsuario": {
         "GetFieldBy": "id",
         "ValueToFind": "lblMensaje"
+    },
+    "Asersion_TituloTerminosCondiciones": {
+        "GetFieldBy": "id",
+        "ValueToFind": "lbTitulo"
     }
 }
