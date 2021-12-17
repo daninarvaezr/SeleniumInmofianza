@@ -1,6 +1,6 @@
 import selenium
 from functions.Functions import Functions as Selenium
-from classes.login import EventLoginInmofianza  as EventLogin
+from classes.FormLogin import EventLogin as EventLogin
 import unittest
 
 class LoginInmofianza(Selenium,unittest.TestCase): 

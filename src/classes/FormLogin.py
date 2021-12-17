@@ -2,7 +2,7 @@ import selenium
 from functions.Functions import Functions as Selenium
 import unittest
 
-class EventLoginInmofianza():
+class EventLogin():
 
     def Logueo(self,UserName,Password):
           for row in Selenium.all_rows(self):
