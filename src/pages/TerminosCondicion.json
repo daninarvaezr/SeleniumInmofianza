@@ -7,12 +7,50 @@
         "GetFieldBy": "id",
         "ValueToFind": "lbTitulo"
     },
-    "IniciarSesion": {
+    "Titulo_3": {
         "GetFieldBy": "id",
-        "ValueToFind": "btnnLogin"
+        "ValueToFind": "lbTitulo"
     },
-    "AsersionMensajeErrorUsuario": {
+    "Text_1": {
         "GetFieldBy": "id",
-        "ValueToFind": "lblMensaje"
+        "ValueToFind": "lblComplemento"
+    },
+    "Text_2": {
+        "GetFieldBy": "id",
+        "ValueToFind": "lblComplemento"
+    },
+    "Text_3": {
+        "GetFieldBy": "id",
+        "ValueToFind": "lblComplemento"
+    },
+    "btnAceptar": {
+        "GetFieldBy": "name",
+        "ValueToFind": "btnAceptar"
+    },
+    "btnRechazar": {
+        "GetFieldBy": "id",
+        "ValueToFind": "btnRechazar"
+    },
+
+    "verificarFlujo1": {
+        "GetFieldBy": "id",
+        "ValueToFind": "verificarFlujo1"
+    },
+    "verificarFlujo2": {
+        "GetFieldBy": "id",
+        "ValueToFind": "verificarFlujo2"
+    },
+    "verificarFlujo3": {
+        "GetFieldBy": "id",
+        "ValueToFind": "verificarFlujo3"
+    },
+    "btnAceptarModal": {
+        "GetFieldBy": "name",
+        "ValueToFind": "btnAceptarModal"
+    },
+    "btnCancelarModal": {
+        "GetFieldBy": "name",
+        "ValueToFind": "btnCancelarModal"
     }
+    
 }
