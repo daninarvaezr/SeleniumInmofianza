@@ -1,11 +1,11 @@
 {
-    "Texto1": {
+    "Titulo_1": {
         "GetFieldBy": "id",
-        "ValueToFind": "txtUsuario"
+        "ValueToFind": "lbTitulo"
     },
-    "Password": {
+    "Titulo_2": {
         "GetFieldBy": "id",
-        "ValueToFind": "txtPwd"
+        "ValueToFind": "lbTitulo"
     },
     "IniciarSesion": {
         "GetFieldBy": "id",
