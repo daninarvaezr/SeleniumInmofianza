@@ -1,3 +1,7 @@
-src/config.ini
+src/data/config.ini
 src/data/ArchivoConfig.xlsx
 EvAutomatizarMti/*
+enviroment/*
+/src/functions/__pycache__/*
+src/tests/__pycache__/*
+src/pages/__pycache__/*
