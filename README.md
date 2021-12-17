@@ -36,7 +36,7 @@ o activar el entorno virtua por consola y ejecutar el archivo antes mencionado
 
 ## Construido con 🛠️
 
-_El presente proyecto esta construido en python con la libreria de Selenium_
+_El presente proyecto esta construido en lenguaje python con la libreria de webdriber de Selenium_
 
 
 ## Autores ✒️
