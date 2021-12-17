@@ -1,0 +1,56 @@
+{
+    "AsersionTituloAprobacionDoc": {
+        "GetFieldBy": "xpath",
+        "ValueToFind": "/html/body/div/div/div[1]/div/div[2]/form/div[3]/div/div[1]/div/div/h4"
+    },
+    "Seleccionar": {
+        "GetFieldBy": "id",
+        "ValueToFind": "gv_Docs_chk_sel_0"
+    },
+    "Tipologia": {
+        "GetFieldBy": "id",
+        "ValueToFind": "gv_Docs_lbl_Tipologia_0"
+    },
+    "Estado": {
+        "GetFieldBy": "id",
+        "ValueToFind": "gv_Docs_lbl_Estado_0"
+    },
+    "Revisar": {
+        "GetFieldBy": "id",
+        "ValueToFind": "gv_Docs_lnk_revisarDoc_0"
+    },
+    "Siguiente": {
+        "GetFieldBy": "id",
+        "ValueToFind": "verificarFlujoInmo"
+    },
+    "BtnCancelar": {
+        "GetFieldBy": "xpath",
+        "ValueToFind": "/html/body/div[2]/div/div[3]/button[2]"
+    },
+    "BtnAceptar": {
+        "GetFieldBy": "xpath",
+        "ValueToFind": "/html/body/div[2]/div/div[3]/button[1]"
+    },
+    "BtnRechazoListaDesplegable": {
+        "GetFieldBy": "xpath",
+        "ValueToFind": "/html/body/div/div/div[1]/div/div[2]/form/div[5]/div/div/div[2]/div/button/div/div"
+    },
+    "RechazoTextoListaDesplegable": {
+        "GetFieldBy": "xpath",
+        "ValueToFind": "/html/body/div/div/div[1]/div/div[2]/form/div[5]/div/div/div[2]/div/button/div/div/div"
+    },
+    "BtnDocumentoAceptado": {
+        "GetFieldBy": "xpath",
+        "ValueToFind": "/html/body/div[3]/div[7]/div/button"
+    },
+    "AsersionCorrecto": {
+        "GetFieldBy": "xpath",
+        "ValueToFind": "/html/body/div[3]/h2"
+    },
+    "AsersionCodigoDeConfirmacion": {
+        "GetFieldBy": "xpath",
+        "ValueToFind": "/html/body/form/div[3]/div/div/div/div[2]/div/div/div[1]/div/div/h4"
+    }
+
+   
+}

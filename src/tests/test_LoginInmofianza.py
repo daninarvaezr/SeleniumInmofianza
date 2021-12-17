@@ -16,8 +16,8 @@ class LoginInmofianza(Selenium,unittest.TestCase):
         Selenium.assert_text(self, 'AsersionMensajeErrorUsuario', 'Usuario o contraseña incorrecto')
     def testLoginInmofianza_AccesoCorrecto(self):
         EventLogin.Logueo(self,1013665960,1013665960)
-        Selenium.esperar(self, 2)        
-        Selenium.assert_text(self, 'Titulo_1', 'DATOS PERSONALES Y ENROLAMIENTO FACIAL')                                                                                         
+        Selenium.esperar(self, 10)        
+        Selenium.assert_text(self, 'Asersion_TituloTerminosCondiciones', 'TRATAMIENTO DE DATOS PERSONALES')                                                                                         
                  
     if __name__ == '__main__':
-        unittest.main()
+        unittest.main() 

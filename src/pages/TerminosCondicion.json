@@ -1,25 +1,26 @@
 {
-    "Titulo_1": {
+    "TratamientoDatosPersonales": {
         "GetFieldBy": "id",
         "ValueToFind": "lbTitulo"
     },
-    "Titulo_2": {
+    "EnrolamientoFacial": {
         "GetFieldBy": "id",
         "ValueToFind": "lbTitulo"
     },
-    "Titulo_3": {
+    
+    "HabeasData": {
         "GetFieldBy": "id",
         "ValueToFind": "lbTitulo"
     },
-    "Text_1": {
+    "TextoPoliticaTD": {
         "GetFieldBy": "id",
         "ValueToFind": "lblComplemento"
     },
-    "Text_2": {
+    "TextoPoliticaEF": {
         "GetFieldBy": "id",
         "ValueToFind": "lblComplemento"
     },
-    "Text_3": {
+    "TextoPoliticaHD": {
         "GetFieldBy": "id",
         "ValueToFind": "lblComplemento"
     },
@@ -32,15 +33,15 @@
         "ValueToFind": "btnRechazar"
     },
 
-    "verificarFlujo1": {
+    "GuardarFlujo1": {
         "GetFieldBy": "id",
         "ValueToFind": "verificarFlujo1"
     },
-    "verificarFlujo2": {
+    "GuardarFlujo2": {
         "GetFieldBy": "id",
         "ValueToFind": "verificarFlujo2"
     },
-    "verificarFlujo3": {
+    "GuardarFlujo3": {
         "GetFieldBy": "id",
         "ValueToFind": "verificarFlujo3"
     },
@@ -51,6 +52,14 @@
     "btnCancelarModal": {
         "GetFieldBy": "name",
         "ValueToFind": "btnCancelarModal"
+    },
+    "AsersionTituloTerminosCondiciones": {
+        "GetFieldBy": "xpath",
+        "ValueToFind": "/html/body/form/div[3]/div/div/div/div[2]/div[1]/div/div[1]/div/div/h4"
+    },
+    "AsersionTituloAprobacionDoc": {
+        "GetFieldBy": "xpath",
+        "ValueToFind": "/html/body/div/div/div[1]/div/div[2]/form/div[3]/div/div[1]/div/div/h4"
     }
     
 }
