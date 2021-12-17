@@ -1,5 +1,5 @@
 {
-    "Username": {
+    "User": {
         "GetFieldBy": "id",
         "ValueToFind": "txtUsuario"
     },
@@ -19,4 +19,5 @@
         "GetFieldBy": "id",
         "ValueToFind": "lbTitulo"
     }
+    
 }

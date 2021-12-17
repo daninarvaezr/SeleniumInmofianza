@@ -15,17 +15,22 @@ _Componentes que deben estar instalados_
 * pytest: pip install pytest
 * json: pip install jsonlib
 * configparser: pip install configparser
+* requests: pip install requests
 
-_Crear un archivo_ **config.ini** _en la raiz de la capera src con la siguiente estructura y agregar los parametros de conectividad necesarios_
+_Crear un archivo_ **config.ini** _ubicado en la  siguiente ruta src\data\config.ini con la siguiente estructura y agregar los parametros de conectividad necesarios_
 ```
 [QA-Omnicanalidad]
 DB_HOST = db_host
 DB_NAME = db_name
 DB_USER = db_user
 DB_PASSWORD = db_password
+RUTA_chrome = ruta_chrome.exe
+UserToken = Usuario
+PasswordToken = Clave
+AplicationToken = Aplicacion
 ```
 
-_Crear ambiente virtual en la raiz del proyecto con el comando_ **virtualenv Enviroment** _Seguido a esto activarlo ejecutando el archivo activate.bat ubicado en la Enviroment/Scripts/_
+_Crear ambiente virtual en la raiz del proyecto con el comando_ **virtualenv Enviroment** _Seguido a esto activarlo ejecutando el archivo activate.bat ubicado en la ruta Enviroment/Scripts/_
  
 
 ## Comenzar 🚀
