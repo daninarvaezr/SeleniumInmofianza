@@ -17,7 +17,7 @@ _Componentes que deben estar instalados_
 * configparser: pip install configparser
 * requests: pip install requests
 
-_Crear un archivo_ **config.ini** _ubicado en la  siguiente ruta src\data\config.ini con la siguiente estructura y agregar los parametros de conectividad necesarios_
+_Crear un archivo_ **config.ini** _ubicado en la  siguiente ruta **src\data\config.ini** con la siguiente estructura y agregar los parametros de conectividad necesarios_
 ```
 [QA-Omnicanalidad]
 DB_HOST = db_host

@@ -12,7 +12,7 @@ class AprobacionDocumento(Selenium,unittest.TestCase):
 
     def testAprobDoc(self):
         EventAD.AprobacionDocumento(self)
-        Selenium.esperar(self, 10000)
+        Selenium.esperar(self, 2)
         #Selenium.assert_text(self, 'AsersionTituloAprobacionDoc','VISUALIZACIÓN Y APROBACIÓN DE DOCUMENTOS')
 
     if __name__ == '__main__':

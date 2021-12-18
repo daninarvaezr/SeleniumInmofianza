@@ -27,7 +27,7 @@ class EventTerminosCondiciones(unittest.TestCase):
         # Selenium.get_elements(self, "btnAceptar").click()
         # Selenium.esperar(self,2)
         # Selenium.get_elements(self, "GuardarFlujo3").click()
-        Selenium.esperar(self,2)
+        #Selenium.esperar(self,2)
 
 
 
