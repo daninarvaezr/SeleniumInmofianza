@@ -346,6 +346,13 @@ class Functions(Inicializar):
             print(self.ventanas)
             print ("Estas en " + ventana + " : " + self.ventanas[ventana])
             Functions.page_has_loaded(self)
+            
+    def close_windows_name(self, ventana):
+        if ventana in self.ventanas:
+            self.driver.switch_to.window(self.ventanas[ventana])
+            self.driver.get(self.ventanas[ventana])
+            self.driver.close()
+            print ("Cerrando ventana: " + self.ventanas[ventana])
 
     ######################   -=_JAVASCRIPT_=-   #############################
     ##########################################################################

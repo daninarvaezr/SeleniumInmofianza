@@ -6,11 +6,30 @@ from functions.Functions import Functions as Selenium
 from classes.FormLogin import EventLogin
 from classes.FormTerminosCondiciones import EventTerminosCondiciones as EventTC
 class EventAprobarDocumentos(unittest.TestCase):
-    def AprobacionDocumento(self):
-        EventLogin.Loguin(self,1013665963,1013665963)
+    def AprobacionDocumento(self):        
         EventTC.AceptarTratamientoDatos(self)
         Selenium.get_json_file(self,"AprobacionDocumentos")
-        Selenium.esperar(self,2)
-        # Selenium.get_elements(self,"Seleccionar").isSelected()
-        Selenium.esperar(self,10000)
+        Selenium.get_elements(self,"Revisar").click()        
+        #Selenium.close_windows_name(self,'ViewDocPDF')               
+        Selenium.switch_to_windows_name(self,'OMNICANALIDAD')
+        Selenium.esperar(self,3)                   
+        Selenium.get_elements(self,"Seleccionar").click()                            
+        Selenium.capturar_pantalla(self)
+        Selenium.get_elements(self,"Siguiente").click()
+        Selenium.get_elements(self,"BtnAceptar").click()
+        Selenium.esperar(self,3000000)
+    def RechazarDocumento(self):        
+        EventTC.AceptarTratamientoDatos(self)
+        Selenium.get_json_file(self,"AprobacionDocumentos")
+        Selenium.get_elements(self,"Revisar").click()        
+        #Selenium.close_windows_name(self,'ViewDocPDF')               
+        Selenium.switch_to_windows_name(self,'OMNICANALIDAD')
+        Selenium.esperar(self,3)                   
+        Selenium.get_elements(self,"Seleccionar").click()                            
+        Selenium.capturar_pantalla(self)
+        Selenium.get_elements(self,"Siguiente").click()
+        Selenium.get_elements(self,"BtnAceptar").click()
+        Selenium.esperar(self,3000000)        
+        
+        #Selenium.esperar(self,1000000)
 
