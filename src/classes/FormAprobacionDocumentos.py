@@ -4,10 +4,8 @@ from selenium.webdriver.common.keys import Keys
 import time
 from functions.Functions import Functions as Selenium
 from classes.FormLogin import EventLogin
-from classes.FormTerminosCondiciones import EventTerminosCondiciones as EventTC
 class EventAprobarDocumentos(unittest.TestCase):
-    def AprobacionDocumento(self):        
-        EventTC.AceptarTratamientoDatos(self)
+    def AprobacionDocumento(self):                
         Selenium.get_json_file(self,"AprobacionDocumentos")
         Selenium.get_elements(self,"Revisar").click()        
         #Selenium.close_windows_name(self,'ViewDocPDF')               

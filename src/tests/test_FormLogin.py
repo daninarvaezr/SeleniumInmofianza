@@ -7,8 +7,7 @@ class LoginInmofianza(Selenium,unittest.TestCase):
 
     def setUp(self):
         Selenium.abrir_navegador(self)
-        Selenium.get_json_file(self,"Login")
-        #Selenium.get_json_file(self,"TerminosCondicion")
+        Selenium.get_json_file(self,"Login")        
         self.driver.maximize_window()
                    
     def testLoginInmofianza_AccesoDenegado(self):

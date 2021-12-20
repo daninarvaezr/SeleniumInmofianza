@@ -1,6 +1,8 @@
 import selenium
 from functions.Functions import Functions as Selenium
 import unittest
+from classes.FormLogin import EventLogin
+from classes.FormTerminosCondiciones import EventTerminosCondiciones as EventTC
 from classes.FormAprobacionDocumentos import EventAprobarDocumentos as EventAD
 
 class AprobacionDocumento(Selenium,unittest.TestCase): 
@@ -10,7 +12,9 @@ class AprobacionDocumento(Selenium,unittest.TestCase):
         Selenium.get_json_file(self,"AprobacionDocumentos")
         self.driver.maximize_window()
 
-    def testAprobarbDocumento(self):
+    def testAprobarDocumento(self):
+        EventLogin.Loguin(self,1013665963,1013665963)
+        EventTC.AceptarTratamientoDatos(self)
         EventAD.AprobacionDocumento(self)
         Selenium.esperar(self, 2)
 
