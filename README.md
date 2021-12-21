@@ -4,18 +4,41 @@ _Proyecto de pruebas automatizadas con selenium webdriver para el aplicativo Omn
 
 ## Pre-requisitos 📋
 
-_Componentes que deben estar instalados_
-* virtualenv: pip install virtualenv
-* selenium: pip install -U selenium
-* pyodbc: pip install pyodbc
-* openpyxl: pip install openpyxl
-* imap-tools: pip install imap-tools
-* psycopg2: pip install psycopg2
-* smtplib: pip install secure-smtplib
-* pytest: pip install pytest
-* json: pip install jsonlib
-* configparser: pip install configparser
-* requests: pip install requests
+_Se recominda instalar los siguientes componentes mediante el archivo requirements.txt con el siguiente comando_ **pip install -r requirements.txt**
+
+* allure-python-commons
+* atomicwrites
+* attrs
+* backports.entry-points-selectable
+* behave
+* colorama
+* distlib
+* et-xmlfile
+* filelock
+* imap-tools
+* importlib-metadata
+* jdcal
+* more-itertools
+* openpyxl
+* packaging
+* parse
+* parse-type
+* platformdirs
+* pluggy
+* psycopg2
+* py
+* pyodbc
+* pyparsing
+* pytest
+* selenium
+* six
+* requests
+* unittest-xml-reporting
+* urllib3
+* virtualenv
+* wcwidth
+* zipp
+
 
 _Crear un archivo_ **config.ini** _ubicado en la  siguiente ruta src\data\config.ini con la siguiente estructura y agregar los parametros de conectividad necesarios_
 ```
@@ -24,10 +47,10 @@ DB_HOST = db_host
 DB_NAME = db_name
 DB_USER = db_user
 DB_PASSWORD = db_password
-RUTA_chrome = ruta_chrome.exe
-UserToken = Usuario
-PasswordToken = Clave
-AplicationToken = Aplicacion
+RUTA_CHROME = ruta_chrome.exe
+USERTOKEN = Usuario
+PASSWORD_TOKEN = Clave
+APLICATION_TOKEN = Aplicacion
 ```
 
 _Crear ambiente virtual en la raiz del proyecto con el comando_ **virtualenv Enviroment** _Seguido a esto activarlo ejecutando el archivo activate.bat ubicado en la ruta Enviroment/Scripts/_
