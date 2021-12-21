@@ -59,7 +59,7 @@ class Functions(Inicializar):
         if navegador == ("CHROME"):
             options = OpcionesChrome()
             #options.binary_location = "C:\\Program Files \\Google\\Chrome\\Application\\chrome.exe"
-            options.binary_location = config['QA-Omnicanalidad']['RUTA_chrome']
+            options.binary_location = config['QA-Omnicanalidad']['RUTA_CHROME']
             options.add_argument('start-maximized')
             self.driver = webdriver.Chrome(chrome_options=options, executable_path=Inicializar.basedir + "\\drivers\\chromedriver.exe")
             self.driver.implicitly_wait(10)

@@ -4,7 +4,7 @@ _Proyecto de pruebas automatizadas con selenium webdriver para el aplicativo Omn
 
 ## Pre-requisitos 📋
 
-_Se recominda instalar los siguientes componentes mediante el archivo requirements.txt con el siguiente comando_ **pip install -r requirements.txt**
+_Se debe tener instalado python y el paquete pip adicional a esto se debe instalar los siguientes componentes mediante el archivo requirements.txt con el siguiente comando_ **pip install -r requirements.txt**
 
 * allure-python-commons
 * atomicwrites
@@ -48,18 +48,18 @@ DB_NAME = db_name
 DB_USER = db_user
 DB_PASSWORD = db_password
 RUTA_CHROME = ruta_chrome.exe
-USERTOKEN = Usuario
+USER_TOKEN = Usuario
 PASSWORD_TOKEN = Clave
 APLICATION_TOKEN = Aplicacion
 ```
 
-_Crear ambiente virtual en la raiz del proyecto con el comando_ **virtualenv Enviroment** _Seguido a esto activarlo ejecutando el archivo activate.bat ubicado en la ruta Enviroment/Scripts/_
+_Crear ambiente virtual en la raiz del proyecto con el comando_ **python -m virtualenv Enviroment** _Seguido a esto activarlo ejecutando el archivo activate.bat ubicado en la ruta Enviroment/Scripts o ejecutando el siguiente comando en la terminal_ **./Enviroment/Scripts/activate.bat**
  
 
 ## Comenzar 🚀
 
 _Desde visual Studio code puedes ejecutar el archivo:_ **projectSeleniumInmofianza.py**
-o activar el entorno virtua por consola y ejecutar el archivo antes mencionado
+_o activar el entorno virtua por consola y ejecutar el archivo antes mencionado_
 
 
 ## Construido con 🛠️
