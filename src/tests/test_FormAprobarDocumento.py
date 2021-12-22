@@ -15,6 +15,8 @@ class AprobacionDocumento(Selenium,unittest.TestCase):
     def testAprobarDocumento(self):
         EventLogin.Loguin(self,1013665963,1013665963)
         EventTC.AceptarTratamientoDatos(self)
+        EventTC.AceptarEnrolamiento(self)
+        EventTC.AceptarFirmaElectronica(self)
         EventAD.AprobacionDocumento(self)
         Selenium.esperar(self, 2)
 

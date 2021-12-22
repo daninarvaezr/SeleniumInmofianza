@@ -40,7 +40,7 @@ _Se debe tener instalado python y el paquete pip adicional a esto se debe instal
 * zipp
 
 
-_Crear un archivo_ **config.ini** _ubicado en la  siguiente ruta src\data\config.ini con la siguiente estructura y agregar los parametros de conectividad necesarios_
+_Crear un archivo_ **config.ini** _ubicado en la  siguiente ruta src\data\config.ini con la siguiente estructura y agregar los parametros de conectividad necesarios; se configura en el equipo personal de cada usuario_
 ```
 [QA-Omnicanalidad]
 DB_HOST = db_host
@@ -53,7 +53,7 @@ PASSWORD_TOKEN = Clave
 APLICATION_TOKEN = Aplicacion
 ```
 
-_Crear ambiente virtual en la raiz del proyecto con el comando_ **python -m virtualenv Enviroment** _Seguido a esto activarlo ejecutando el archivo activate.bat ubicado en la ruta Enviroment/Scripts o ejecutando el siguiente comando en la terminal_ **./Enviroment/Scripts/activate.bat**
+_Crear ambiente virtual en la raiz del proyecto con el comando_ **python -m virtualenv Enviroment** ó **python -m venv + nombre del ambiente** _Seguido a esto activarlo ejecutando el archivo activate.bat ubicado en la ruta Enviroment/Scripts o ejecutando el siguiente comando en la terminal_ **./Enviroment/Scripts/activate.bat**
  
 
 ## Comenzar 🚀

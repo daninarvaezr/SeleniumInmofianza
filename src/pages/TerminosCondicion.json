@@ -47,6 +47,10 @@
         "GetFieldBy": "name",
         "ValueToFind": "btnAceptarModal"
     },
+    "btnVolverModal": {
+        "GetFieldBy": "class",
+        "ValueToFind": "btn btn-secondary verde2_b"
+    },
     "btnCancelarModal": {
         "GetFieldBy": "name",
         "ValueToFind": "btnCancelarModal"

@@ -18,6 +18,9 @@
     "AsersionTituloTerminosCondiciones": {
         "GetFieldBy": "xpath",
         "ValueToFind": "/html/body/form/div[3]/div/div/div/div[2]/div[1]/div/div[1]/div/div/h4"
+    },
+    "AsersionLogin": {
+        "GetFieldBy": "xpath",
+        "ValueToFind": "/html/body/div[1]/div/div/div/div/div[1]/div/div[2]/div/h1"
     }
-    
 }
