@@ -74,7 +74,7 @@ class Functions(Inicializar):
             self.driver.get(URL)
             self.ventanas = {'Principal':self.driver.window_handles[0]}
             return self.driver
-        
+
         if navegador == ("EDGE"):
             self.driver = webdriver.Edge(executable_path=Inicializar.basedir + "\\drivers\\msedgedriver.exe")
             self.driver.implicitly_wait(10)
