@@ -19,4 +19,4 @@ class EventAprobarDocumentos(unittest.TestCase):
         
     def RechazarDocumento(self):
 
-        #Selenium.esperar(self,1000000)
+        

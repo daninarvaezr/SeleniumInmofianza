@@ -48,8 +48,8 @@
         "ValueToFind": "btnAceptarModal"
     },
     "btnVolverModal": {
-        "GetFieldBy": "class",
-        "ValueToFind": "btn btn-secondary verde2_b"
+        "GetFieldBy": "id",
+        "ValueToFind": "btn_CancelarInmofianza"
     },
     "btnCancelarModal": {
         "GetFieldBy": "name",

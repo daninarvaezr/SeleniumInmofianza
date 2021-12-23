@@ -20,29 +20,23 @@ class TratamientoDatos(Selenium,unittest.TestCase):
         Selenium.assert_text(self, 'AsersionTituloAprobacionDoc','VISUALIZACIÓN Y APROBACIÓN DE DOCUMENTOS')
 
     def testRechazarTratamientoDatos(self):
-        EventLogin.Loguin(self,1013665963,1013665963) #pendiente cambiar documento
+        EventLogin.Loguin(self,101366451,101366451)
         EventTC.RechazarTratamientoDatos(self)
+        EventLogin.Loguin(self,101366451,101366451)
         Selenium.esperar(self, 2)
-        Selenium.assert_text(self, 'AsersionLogin','Ingreso de Usuario')
+
 
     def testRechazarEnrolamiento(self):
-        EventLogin.Loguin(self,1013665963,1013665963) #pendiente cambiar documento
-        EventTC.AceptarTratamientoDatos(self)
+        EventLogin.Loguin(self,101366453,101366453)
         EventTC.RechazarEnrolamientoFacial(self)
+        EventLogin.Loguin(self,101366453,101366453) # pte realizar las funciones en el login ( bloqueo)
         Selenium.esperar(self, 2)
-        Selenium.assert_text(self, 'AsersionLogin','Ingreso de Usuario')
 
     def testRechazarFirmaElectronica(self):
-        EventLogin.Loguin(self,1013665964,1013665964) #pendiente cambiar documento
-        #EventTC.AceptarTratamientoDatos(self)
-        #EventTC.AceptarEnrolamiento(self)
-        Selenium.esperar(self, 2)
+        EventLogin.Loguin(self,101366450,101366450)
         EventTC.RechazarFirmaElectronica(self)
+        EventLogin.Loguin(self,101366450,101366450)
         Selenium.esperar(self, 2)
-        #Selenium.assert_text(self, 'AsersionLogin','Ingreso de Usuario')
-
-
-
-
+        
     if __name__ == '__main__':
         unittest.main()

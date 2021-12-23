@@ -4,6 +4,7 @@ from selenium.webdriver.common.keys import Keys
 import time
 from functions.Functions import Functions as Selenium
 
+
 class EventTerminosCondiciones(unittest.TestCase):
 
     def AceptarTratamientoDatos(self):
@@ -44,6 +45,7 @@ class EventTerminosCondiciones(unittest.TestCase):
         Selenium.esperar(self,2)
         Selenium.get_elements(self,"btnVolverModal").click()
         Selenium.esperar(self,2)
+        Selenium.get_json_file(self,"Login")
         Selenium.assert_text(self, 'AsersionLogin','Ingreso de Usuario')
         Selenium.esperar(self,2)
 
@@ -57,19 +59,20 @@ class EventTerminosCondiciones(unittest.TestCase):
         Selenium.esperar(self,2)
         Selenium.get_elements(self,"btnVolverModal").click()
         Selenium.esperar(self,2)
+        Selenium.get_json_file(self,"Login")
         Selenium.assert_text(self, 'AsersionLogin','Ingreso de Usuario')
         Selenium.esperar(self,2)
 
     def RechazarFirmaElectronica(self):
-        #EventTerminosCondiciones.AceptarTratamientoDatos(self)
-        #EventTerminosCondiciones.AceptarEnrolamiento(self)
+        EventTerminosCondiciones.AceptarTratamientoDatos(self)
+        EventTerminosCondiciones.AceptarEnrolamiento(self)
         Selenium.get_json_file(self,"TerminosCondicion")
-        Selenium.esperar(self,2)
         Selenium.get_elements(self, "btnRechazar").click()
         Selenium.esperar(self,2)
         Selenium.get_elements(self,"btnAceptarModal").click()
         Selenium.esperar(self,2)
         Selenium.get_elements(self,"btnVolverModal").click()
         Selenium.esperar(self,2)
+        Selenium.get_json_file(self,"Login")
         Selenium.assert_text(self, 'AsersionLogin','Ingreso de Usuario')
         Selenium.esperar(self,2)
