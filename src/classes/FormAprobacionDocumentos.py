@@ -17,6 +17,4 @@ class EventAprobarDocumentos(unittest.TestCase):
         Selenium.get_elements(self,"BtnAceptar").click()
         Selenium.esperar(self,3000000)
         
-    def RechazarDocumento(self):
-
-        
+    #def RechazarDocumento(self):

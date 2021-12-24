@@ -13,7 +13,8 @@ class AprobacionDocumento(Selenium,unittest.TestCase):
         self.driver.maximize_window()
 
     def testAprobarDocumento(self):
-        EventLogin.Loguin(self,1013665963,1013665963)
+        Cedula=Selenium.leer_celda(self, 'K7')
+        EventLogin.Loguin(self,Cedula,Cedula)
         EventTC.AceptarTratamientoDatos(self)
         EventTC.AceptarEnrolamiento(self)
         EventTC.AceptarFirmaElectronica(self)

@@ -8,3 +8,4 @@ src/pages/__pycache__/*
 src/classes/__pycache__/*
 src/data/capturas/*
 EnviromentInmof/*
+src/functions/Inicializar.py

@@ -10,11 +10,13 @@ class LoginInmofianza(Selenium,unittest.TestCase):
         Selenium.get_json_file(self,"Login")        
         self.driver.maximize_window()
                    
-    def testLoginInmofianza_AccesoDenegado(self):
-        EventLogin.Loguin(self,1013699,10136999)
+    def testLogin_AccesoDenegado(self):
+        Cedula=Selenium.leer_celda(self, 'K1')
+        EventLogin.Loguin(self,Cedula,Cedula)
         Selenium.assert_text(self, 'AsersionMensajeErrorUsuario', 'Usuario o contraseña incorrecto')
-    def testLoginInmofianza_AccesoCorrecto(self):
-        EventLogin.Loguin(self,1013665963,1013665963)
+    def testLogin_AccesoCorrecto(self):
+        Cedula=Selenium.leer_celda(self, 'K2')
+        EventLogin.Loguin(self,Cedula,Cedula)
         Selenium.esperar(self, 10)        
         Selenium.assert_text(self, 'AsersionTituloTerminosCondiciones', 'TRATAMIENTO DE DATOS PERSONALES')                                                                                         
                  
