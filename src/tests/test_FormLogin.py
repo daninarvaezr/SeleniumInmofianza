@@ -20,5 +20,5 @@ class LoginInmofianza(Selenium,unittest.TestCase):
         Selenium.esperar(self, 10)        
         Selenium.assert_text(self, 'AsersionTituloTerminosCondiciones', 'TRATAMIENTO DE DATOS PERSONALES')                                                                                         
                  
-    if __name__ == '__main__':
-        unittest.main() 
+if __name__ == '__main__':
+    unittest.main() 

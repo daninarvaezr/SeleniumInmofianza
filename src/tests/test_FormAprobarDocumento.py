@@ -21,5 +21,5 @@ class AprobacionDocumento(Selenium,unittest.TestCase):
         EventAD.AprobacionDocumento(self)
         Selenium.esperar(self, 2)
 
-    if __name__ == '__main__':
-        unittest.main()
+if __name__ == '__main__':
+    unittest.main()
