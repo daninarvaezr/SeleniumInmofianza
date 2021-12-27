@@ -40,17 +40,43 @@ _Se debe tener instalado python y el paquete pip adicional a esto se debe instal
 * zipp
 
 
-_Crear un archivo_ **config.ini** _ubicado en la  siguiente ruta src\data\config.ini con la siguiente estructura y agregar los parametros de conectividad necesarios; se configura en el equipo personal de cada usuario_
+_Crear un archivo_ **Inicializar.py** _ubicado en la  siguiente ruta src\functions\ con la siguiente estructura y agregar los parametros de conectividad necesarios o configuraciones personalizadas que requiera el ambiente segun el equipo_
 ```
-[QA-Omnicanalidad]
-DB_HOST = db_host
-DB_NAME = db_name
-DB_USER = db_user
-DB_PASSWORD = db_password
-RUTA_CHROME = ruta_chrome.exe
-USER_TOKEN = Usuario
-PASSWORD_TOKEN = Clave
-APLICATION_TOKEN = Aplicacion
+import os
+
+class Inicializar():
+    # Directorio Base
+    basedir = os.path.abspath(os.path.join(__file__, "../.."))
+    DateFormat = '%d/%m/%Y'
+    HourFormat = "%H%M%S"
+
+    # JsonData
+    Json = basedir + u"/pages"
+    # BROWSER DE PRUEBAS
+    NAVEGADOR = u'CHROME'
+    # DIRECTORIO DE LA EVIDENCIA
+    Path_Evidencias = basedir + u'/data/capturas'
+    # HOJA DE DATOS EXCEL
+    Excel = basedir + u'/data/ArchivoConfig.xlsx'
+    Environment = 'QA'
+
+    if Environment == 'QA':
+        URL = ''
+        URL_DEUDOR = ''
+        URL_TOKEN = ''
+        URL_CASOS =''
+        DB_HOST = ''
+        DB_PORT = ''
+        DB_DATABASE = ''
+        DB_USER = ''
+        DB_PASS = ''
+        USER_TOKEN = ''
+        PASSWORD_TOKEN = ''
+        APLICATION_TOKEN = ''
+        RUTA_CHROME = 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe'
+        MAILUSER = ''
+        MAILPASSWORD = ''
+
 ```
 
 _Crear ambiente virtual en la raiz del proyecto con el comando_ **python -m virtualenv Enviroment** ó **python -m venv + nombre del ambiente** _Seguido a esto activarlo ejecutando el archivo activate.bat ubicado en la ruta Enviroment/Scripts o ejecutando el siguiente comando en la terminal_ **./Enviroment/Scripts/activate.bat**
