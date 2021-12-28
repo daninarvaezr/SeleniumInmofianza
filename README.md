@@ -1,10 +1,11 @@
-# Selenium Inmofianza
+# `Proyecto Selenium`
+## _`Inmofianza-Omnicanalidad`_
 
 _Proyecto de pruebas automatizadas con selenium webdriver para el aplicativo Omnicanalidad_
 
-## Pre-requisitos 📋
+## `Pre-requisitos` 📋
 
-_Se debe tener instalado python y el paquete pip adicional a esto se debe instalar los siguientes componentes mediante el archivo requirements.txt con el siguiente comando_ **pip install -r requirements.txt**
+_Se debe tener instalado python y el paquete pip adicional a esto se debe instalar los siguientes componentes mediante el archivo requirements.txt con el siguiente comando_ **`pip install -r requirements.txt`**
 
 * allure-python-commons
 * atomicwrites
@@ -40,8 +41,8 @@ _Se debe tener instalado python y el paquete pip adicional a esto se debe instal
 * zipp
 
 
-_Crear un archivo_ **Inicializar.py** _ubicado en la  siguiente ruta src\functions\ con la siguiente estructura y agregar los parametros de conectividad necesarios o configuraciones personalizadas que requiera el ambiente segun el equipo_
-```
+_Crear un archivo_ **`Inicializar.py`** _ubicado en la  siguiente ruta `src\functions\` con la siguiente estructura y agregar los parametros de conectividad necesarios o configuraciones personalizadas que requiera el ambiente segun el equipo_
+~~~
 import os
 
 class Inicializar():
@@ -76,27 +77,30 @@ class Inicializar():
         RUTA_CHROME = 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe'
         MAILUSER = ''
         MAILPASSWORD = ''
+~~~
 
-```
-
-_Crear ambiente virtual en la raiz del proyecto con el comando_ **python -m virtualenv Enviroment** ó **python -m venv + nombre del ambiente** _Seguido a esto activarlo ejecutando el archivo activate.bat ubicado en la ruta Enviroment/Scripts o ejecutando el siguiente comando en la terminal_ **./Enviroment/Scripts/activate.bat**
+_Crear ambiente virtual en la raiz del proyecto con el comando_ **`python -m virtualenv enviroment`** ó **`python -m venv + enviroment`** _Seguido a esto activarlo ejecutando el archivo activate.bat ubicado en la ruta `enviroment/Scripts` o ejecutando el siguiente comando en la terminal_ **`./Enviroment/Scripts/activate.bat`**
  
 
-## Comenzar 🚀
+## `Comenzar` 🚀
 
-_Desde visual Studio code puedes ejecutar el archivo:_ **projectSeleniumInmofianza.py**
+_Desde visual Studio code puedes ejecutar el archivo:_ **projectSelenium.py**
 _o activar el entorno virtua por consola y ejecutar el archivo antes mencionado_
 
 
-## Construido con 🛠️
+## `Construido con` 🛠️
 
 _El presente proyecto esta construido en lenguaje python con la libreria de webdriber de Selenium_
 
 
-## Autores ✒️
+## `Autores` ✒️
 
-* **Natalia Narvaez** - *Analista QA* - [NataliaNarvaez](https://github.com/daninarvaezr)
-* **Daniel Duran** - *Analista QA* - [DaniDuran](https://github.com/DaniDuran)
+* **`Natalia Narvaez`** 
+    - *Analista QA* 
+    - [linkedin-NataliaNarvaez](https://github.com/daninarvaezr)
+* **`Daniel Duran`** 
+    - *Analista QA* 
+    - [linkedin-DaniDuran](https://github.com/DaniDuran)
 
 
 ## Expresiones de Gratitud 🎁

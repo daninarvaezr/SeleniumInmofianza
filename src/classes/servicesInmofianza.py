@@ -1,6 +1,7 @@
 import requests
 import configparser
 import os
+import json
 config = configparser.ConfigParser()
 basedir = os.path.abspath(os.path.join(__file__, "../.."))
 config.read(basedir + u'\\data\\config.ini')
@@ -33,9 +34,11 @@ class ServicesInmofianza():
 token = ServicesInmofianza.servicesToken()
 if token is not None:
     try:
-        firmantePrincipalTrue = 'true'
-        firmantePrincipalFalse = 'false'
-        services_casos = {
+        headers = {
+            'Content-Type': "application/json",
+            'Authorization': token
+        }
+        services_casos = """{
             "idCliente": 13919,
             "datosFirmantes": [
                 {
@@ -50,7 +53,7 @@ if token is not None:
                     "fechaNacimiento": "1993-12-07",
                     "fechaExpedicionDocumento": "2011-12-18",
                     "ciudadExpedicionDocumento": "GIRON",
-                    "firmantePrincipal": firmantePrincipalTrue,
+                    "firmantePrincipal": true,
                     "tipoFirma": 2
                 },
                 {
@@ -65,7 +68,7 @@ if token is not None:
                     "fechaNacimiento": "1993-12-07",
                     "fechaExpedicionDocumento": "2011-12-18",
                     "ciudadExpedicionDocumento": "GIRON",
-                    "firmantePrincipal": firmantePrincipalFalse,
+                    "firmantePrincipal": false,
                     "tipoFirma": 3
                 }
             ],
@@ -101,7 +104,7 @@ if token is not None:
                     "correoNotificaciones": "daniela.narvaez@thomasgreg.com",
                     "fechaNacimiento": "1989-12-12",
                     "fechaExpedicionDocumento": "2001-12-12",
-                    "firmantePrincipal": firmantePrincipalTrue,
+                    "firmantePrincipal": true,
                     "emailContactoInmobiliaria": "daninarvaezr2835@hotmail.com"
                 },
                 {
@@ -119,7 +122,7 @@ if token is not None:
                     "correoNotificaciones": "daninarvaezr2835@hotmail.com",
                     "fechaNacimiento": "1985-12-12",
                     "fechaExpedicionDocumento": "2008-12-12",
-                    "firmantePrincipal": firmantePrincipalFalse,
+                    "firmantePrincipal": false,
                     "emailContactoInmobiliaria": "daninarvaezr2835@hotmail.com"
                 }
             ],
@@ -130,13 +133,11 @@ if token is not None:
                 "nombreAsesor": "Asesor Natalia Narvaez"
             },
             "idFianza": 24122108
-        }
-        headers = {
-            'Content-Type': "application/json",
-            'Authorization': token
-        }
+        }"""
+      
+        jsonServicesCasos = json.loads(services_casos)
         rc = requests.post(config['QA-Omnicanalidad']
-                           ['URL_CASOS'], json=token, headers=headers)
+                           ['URL_CASOS'], json=jsonServicesCasos, headers=headers)
         services_casos = rc.json()
 
         if rc.status_code == 200:
@@ -146,7 +147,6 @@ if token is not None:
             print("Descripcion: ", services_casos['title'])
             print("Status Services casos: ", services_casos['status'])
             print("Error: ", services_casos['errors'])
-            # print(services_casos)
     except (requests.Error) as error:
         print('Estado fallido: ', rc.status_code)
         cursor = None
