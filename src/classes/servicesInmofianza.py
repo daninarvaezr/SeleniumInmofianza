@@ -2,13 +2,14 @@ import requests
 import configparser
 import os
 import json
+#from functions.Inicializar import Inicializar as init
 config = configparser.ConfigParser()
 basedir = os.path.abspath(os.path.join(__file__, "../.."))
 config.read(basedir + u'\\data\\config.ini')
 
 
 class ServicesInmofianza():
-    def servicesToken(_URL_TOKEN=config['QA-Omnicanalidad']['URL_TOKEN'], _USER_TOKEN=config['QA-Omnicanalidad']['USER_TOKEN'], _PASSWORD_TOKEN=config['QA-Omnicanalidad']['PASSWORD_TOKEN'], _APLICATION_TOKEN=config['QA-Omnicanalidad']['APLICATION_TOKEN']):
+    def servicesToken(_URL_TOKEN='https://frontunificadoqa.thomasgreg.com:8001/api/FileReception/Authentication', _USER_TOKEN='Usuariox', _PASSWORD_TOKEN='Clave', _APLICATION_TOKEN='OMNICANALIDAD'):
         try:
             services_token = {
                 "User": _USER_TOKEN,
@@ -24,6 +25,7 @@ class ServicesInmofianza():
             #print("token: ",services_token_response['token'])
             token = services_token_response['token']
             return token
+            print(token)
         except (requests.Error) as error:
             token = None
             services_token_response = rt.json()
@@ -38,11 +40,12 @@ if token is not None:
             'Content-Type': "application/json",
             'Authorization': token
         }
+        vprimerNombre='abc'
         services_casos = """{
             "idCliente": 13919,
             "datosFirmantes": [
                 {
-                    "primerNombre": "Natalia",
+                    "primerNombre": """+vprimerNombre+""",
                     "segundoNombre": "",
                     "primerApellido": "Narvaez",
                     "segundoApellido": "",
